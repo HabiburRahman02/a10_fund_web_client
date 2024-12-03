@@ -14,32 +14,34 @@ const Banner = () => {
     return (
         <div className='mb-20'>
             <AutoplaySlider
-                // play={true}
+                play={true}
                 cancelOnInteraction={false}
                 interval={2000}
                 className='w-full md:h-screen h-[520px]' >
                 <div
                     className="hero min-h-screen"
                     style={{
-                        backgroundImage: `url(${banner1})`,
+                        backgroundImage: `url(${banner3})`,
                         backgroundRepeat: 'no-repeat',
                         backgroundSize: 'cover'
                     }}>
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-neutral-content">
-                        <div className='flex justify-start'>
-                            <div className="md:w-1/2">
+                        <div className='flex justify-start items-center'>
+                            <div className="md:w-2/3">
                                 <h1 className="mb-5 text-7xl font-bold">Startup Fundraising Platform</h1>
                                 <p className="mb-5 text-2xl font-bold">
                                     Start and manage a professional fundraise to attract quality accredited investors.
                                 </p>
                                 <Link to='/'>
-                                    <button className="uppercase bg-[rgb(37,168,214)] py-3 px-8  text-white font-bold hover:bg-[rgb(10,132,176)] transition-colors">
+                                    <button className="uppercase bg-[rgb(37,168,214)] py-3 px-8  text-white font-bold 
+                                    border-[2px]
+                                    border-transparent hover:border-[2px] hover:border-white hover:bg-transparent transition-all">
                                         Get Started
                                     </button>
                                 </Link>
                             </div>
-                            <div className='md:w-1/2'>
+                            <div className='md:w-1/3'>
 
                             </div>
                         </div>
@@ -53,39 +55,53 @@ const Banner = () => {
                         backgroundSize: 'cover'
                     }}>
                     <div className="hero-overlay bg-opacity-60"></div>
-                    <div className="hero-content text-neutral-content text-center">
-                        <div className="max-w-md">
-                            <h1 className="mb-5 text-5xl font-bold">We collect clothes</h1>
-                            <p className="mb-5">
-                                Our mission is to bring warmth and dignity to those who need it most. By collecting and distributing gently used clothing, we aim to make a difference in the lives of individuals who are facing financial difficulties. We strive to build a community that cares, offering compassion and practical help to those in need.
-                            </p>
-                            <Link to='/'>
-                                <button className="bg-[rgb(37,168,214)] py-3 px-8  text-white font-bold hover:bg-[rgb(10,132,176)] transition-colors">
-                                    Learn More
-                                </button>
-                            </Link>
+                    <div className="hero-content text-neutral-content">
+                        <div className='flex justify-start items-center'>
+                            <div className="md:w-1/2">
+                                <h1 className="mb-5 text-7xl font-bold">Startup Fundraising Platform</h1>
+                                <p className="mb-5 text-2xl font-bold">
+                                    Start and manage a professional fundraise to attract quality accredited investors.
+                                </p>
+                                <Link to='/'>
+                                    <button className="uppercase bg-[rgb(37,168,214)] py-3 px-8  text-white font-bold 
+                                    border-[2px]
+                                    border-transparent hover:border-[2px] hover:border-white hover:bg-transparent transition-all">
+                                        Get Started
+                                    </button>
+                                </Link>
+                            </div>
+                            <div className='md:w-1/2'>
+
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div
                     className="hero min-h-screen"
                     style={{
-                        backgroundImage: `url(${banner3})`,
+                        backgroundImage: `url(${banner1})`,
                         backgroundRepeat: 'no-repeat',
                         backgroundSize: 'cover'
                     }}>
                     <div className="hero-overlay bg-opacity-60"></div>
-                    <div className="hero-content text-neutral-content text-center">
-                        <div className="max-w-md">
-                            <h1 className="mb-5 text-5xl font-bold">We collect clothes</h1>
-                            <p className="mb-5">
-                                Our mission is to bring warmth and dignity to those who need it most. By collecting and distributing gently used clothing, we aim to make a difference in the lives of individuals who are facing financial difficulties. We strive to build a community that cares, offering compassion and practical help to those in need.
-                            </p>
-                            <Link to='/'>
-                                <button className="bg-[rgb(37,168,214)] py-3 px-8  text-white font-bold hover:bg-[rgb(10,132,176)] transition-colors">
-                                    Learn More
-                                </button>
-                            </Link>
+                    <div className="hero-content text-neutral-content">
+                        <div className='flex justify-start items-center'>
+                            <div className="md:w-1/2">
+                                <h1 className="mb-5 text-7xl font-bold">Startup Fundraising Platform</h1>
+                                <p className="mb-5 text-2xl font-bold">
+                                    Start and manage a professional fundraise to attract quality accredited investors.
+                                </p>
+                                <Link to='/'>
+                                    <button className="uppercase bg-[rgb(37,168,214)] py-3 px-8  text-white font-bold 
+                                    border-[2px]
+                                    border-transparent hover:border-[2px] hover:border-white hover:bg-transparent transition-all">
+                                        Get Started
+                                    </button>
+                                </Link>
+                            </div>
+                            <div className='md:w-1/2'>
+
+                            </div>
                         </div>
                     </div>
                 </div>
