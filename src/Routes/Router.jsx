@@ -14,7 +14,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/allCampaign',
-                element: <AllCampaign></AllCampaign>
+                element: <AllCampaign></AllCampaign>,
+                loader: () => fetch('/allCampaign.json')
             },
         ]
     },

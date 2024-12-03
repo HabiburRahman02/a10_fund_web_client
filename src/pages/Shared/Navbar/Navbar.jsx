@@ -2,11 +2,11 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const links = <>
-        <NavLink className={({ isActive }) => `mr-8 uppercase text-xs hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/'>Home</NavLink>
-        <NavLink className={({ isActive }) => `mr-8 uppercase text-xs hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/allCampaign'>All Campaign</NavLink>
-        <NavLink className={({ isActive }) => `mr-8 uppercase text-xs hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/addNewCampaign'>Add New Campaign</NavLink>
-        <NavLink className={({ isActive }) => `mr-8 uppercase text-xs hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/myCampaign'>My Campaign</NavLink>
-        <NavLink className={({ isActive }) => `mr-8 uppercase text-xs hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/myDonation'>My Donation</NavLink>
+        <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/'>Home</NavLink>
+        <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/allCampaign'>All Campaign</NavLink>
+        <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/addNewCampaign'>Add New Campaign</NavLink>
+        <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/myCampaign'>My Campaign</NavLink>
+        <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/myDonation'>My Donation</NavLink>
 
     </>
     return (
@@ -71,11 +71,14 @@ const Navbar = () => {
                             Login
                         </button>
                     </Link>
-                    {/* <Link to='/login'>
-                        <button className="py-2 px-8 border-2  hover:text-white font-bold hover:bg-[rgb(37,168,214)] hover:border-[rgb(37,168,214)] transition-colors">
-                            Sign Up
+                    <Link to='/login'>
+                        <button className="py-2 px-8  text-white font-bold  
+                         border-[2px]
+                         bg-[rgb(37,168,214)]
+                                    border-transparent hover:border-[2px] hover:border-white hover:bg-transparent transition-all">
+                            Register
                         </button>
-                    </Link> */}
+                    </Link>
                 </div>
             </div>
         </div>
