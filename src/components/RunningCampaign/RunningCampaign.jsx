@@ -1,21 +1,22 @@
-// import { useLoaderData } from "react-router-dom";
-import AllCampaignCard from "./AllCampaignCard";
-import Heading from "../../components/Heading/Heading";
 import { useEffect, useState } from "react";
+import Heading from "../Heading/Heading";
+import AllCampaignCard from "../../pages/AllCampaign/AllCampaignCard";
 
-const AllCampaign = () => {
+const RunningCampaign = () => {
+
     const [campaigns, setCampaigns] = useState([]);
     // const campaigns = useLoaderData();
     // console.log(campaigns);
     useEffect(() => {
-        fetch('http://localhost:5000/campaign')
+        fetch('http://localhost:5000/campaign/running')
             .then(res => res.json())
             .then(data => setCampaigns(data))
     }, [])
+
     return (
         <div className="">
             <div className="py-20 max-w-[1200px] mx-auto ">
-                <Heading title="All Campaigns"></Heading>
+                <Heading title="Running Campaigns"></Heading>
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {
                         campaigns?.map(campaign => <AllCampaignCard
@@ -27,6 +28,7 @@ const AllCampaign = () => {
             </div>
         </div>
     );
+
 };
 
-export default AllCampaign;
+export default RunningCampaign;

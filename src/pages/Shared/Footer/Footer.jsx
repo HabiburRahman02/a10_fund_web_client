@@ -2,7 +2,7 @@ import { FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <div className="bg-[#1d181f]">
+        <div className="bg-[#1d181f] mt-20">
             <footer className="footer md:flex justify-between py-20 max-w-[1200px] mx-auto font-bold  text-[#979797] p-10">
                 <nav>
                     <h6 className="footer-title">Services</h6>

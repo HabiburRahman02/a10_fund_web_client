@@ -1,4 +1,4 @@
-import AllCampaign from "../../AllCampaign/AllCampaign";
+import RunningCampaign from "../../../components/RunningCampaign/RunningCampaign";
 import Banner from "../Slider/Slider";
 
 
@@ -6,8 +6,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <AllCampaign></AllCampaign>
-
+            <RunningCampaign></RunningCampaign>
         </div>
     );
 };

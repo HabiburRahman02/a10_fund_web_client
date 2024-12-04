@@ -2,23 +2,24 @@ import { MdLocationPin } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const AllCampaignCard = (campaign) => {
-    const { name, des, location, img } = campaign.campaign
+    const { title, deadline, description, amount, photoUrl } = campaign.campaign
     // console.log(campaign.campaign);
     return (
         <div className=" bg-white mx-8 md:mx-0 border-[1px] hover:border-blue-600">
             <figure>
                 <img
                     className="h-44 object-cover w-full"
-                    src={img}
+                    src={photoUrl}
                     alt="Shoes" />
             </figure>
             <div className="p-4 space-y-2">
-                <h2 className="card-title text-base">{name}</h2>
-                <p>{des}</p>
+                <h2 className="card-title text-base">{title}</h2>
+                <p>{description}</p>
                 <p className="flex gap-1 pb-8">
-                    <MdLocationPin></MdLocationPin>
-                    <span className="text-sm">{location}</span>
+                    {/* <MdLocationPin></MdLocationPin> */}
+                    <span className="text-sm">Price: {amount}</span>
                 </p>
+                <span className="text-sm">Date: {deadline}</span>
                 <div className="">
                     <Link to='/'>
                         <button className="py-2 px-8 w-full text-white hover:text-black font-bold  
