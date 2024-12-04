@@ -4,6 +4,7 @@ import bgImg from '../../assets/login/register.png'
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useContext, useState } from 'react';
 import { AuthContent } from '../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 
 const Register = () => {
@@ -22,7 +23,23 @@ const Register = () => {
         const checked = form.checked.checked;
         const user = { name, photoUrl, email, password, checked }
 
+
+        // validation
+
         // create a user
+        createUser(email, password)
+            .then(() => {
+                Swal.fire({
+                    position: "top-center",
+                    icon: "success",
+                    title: "Create a user successfully",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
 
     return (
