@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import bgImg from '../../assets/login/login-2.webp'
+import bgImg from '../../assets/login//register.png'
 
 
 const Login = () => {
@@ -40,15 +40,14 @@ const Login = () => {
                     <div className="divider">or </div>
                     {/* <SocialIcon></SocialIcon> */}
                     <div>
-                        <p className='font-medium text-center'>Are you new? <Link className='text-blue-600' to='/signup'>Login</Link></p>
+                        <p className='font-medium text-center'>Are you new? <Link className='text-blue-600' to='/register'>Register</Link></p>
                     </div>
                 </form>
             </div>
-            <div className='md:w-1/2 h-screen flex items-center text-center bg-cover bg-center p-24 opacity-90' style={{ backgroundImage: `url(${bgImg})` }}>
+            <div className='md:w-1/2 h-screen flex items-center text-center bg-cover bg-center text-white p-24 opacity-90' style={{ backgroundImage: `url(${bgImg})` }}>
                 <div>
-
-                    <h3 className='text-4xl font-bold'>CrowdCube</h3>
-                    <p className='font-medium'>Discover a seamless shopping experience with our curated collection of products. From fashion to electronics, we bring quality.</p>
+                    <h2 className='font-bold text-[40px]'>Crowd<span className='text-blue-500'>Cube</span></h2>
+                    <p className='font-medium'>Be the reason someone smiles today—your donation can turn dreams into reality and hardships into happiness.</p>
                 </div>
             </div>
         </div>

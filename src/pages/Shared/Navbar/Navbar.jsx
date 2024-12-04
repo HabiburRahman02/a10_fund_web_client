@@ -10,7 +10,7 @@ const Navbar = () => {
 
     </>
     return (
-        <div className=" text-white py-3 fixed z-50 top-0 w-full">
+        <div className=" text-white py-3 bg-gray-900 opacity-80">
             <div className="navbar max-w-[1200px] mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -71,7 +71,7 @@ const Navbar = () => {
                             Login
                         </button>
                     </Link>
-                    <Link to='/login'>
+                    <Link to='/register'>
                         <button className="py-2 px-8  text-white font-bold  
                          border-[2px]
                          bg-[rgb(37,168,214)]
