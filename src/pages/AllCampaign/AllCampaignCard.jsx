@@ -14,13 +14,13 @@ const AllCampaignCard = (campaign) => {
             </figure>
             <div className="p-4 space-y-2">
                 <h2 className="card-title text-base">{title}</h2>
-                <p>{description}</p>
-                <p className="flex gap-1 pb-8">
+                <p className="text-gray-600">{description}</p>
+                <p className="flex gap-1">
                     {/* <MdLocationPin></MdLocationPin> */}
-                    <span className="text-sm">Price: {amount}</span>
+                    <span className="text-sm text-gray-600">Donation Amount: {amount} Tk</span>
                 </p>
-                <span className="text-sm">Date: {deadline}</span>
-                <div className="">
+                <span className="text-sm text-gray-600">Date: {deadline}</span>
+                <div className="pt-8">
                     <Link to='/'>
                         <button className="py-2 px-8 w-full text-white hover:text-black font-bold  
                          border-[2px]

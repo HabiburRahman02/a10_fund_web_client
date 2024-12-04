@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Heading from "../Heading/Heading";
-import AllCampaignCard from "../../pages/AllCampaign/AllCampaignCard";
+import RunningCampaignCard from "./RunningCampaignCard";
 
 const RunningCampaign = () => {
 
@@ -19,10 +19,10 @@ const RunningCampaign = () => {
                 <Heading title="Running Campaigns"></Heading>
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {
-                        campaigns?.map(campaign => <AllCampaignCard
+                        campaigns?.map(campaign => <RunningCampaignCard
                             key={campaign.id}
                             campaign={campaign}
-                        ></AllCampaignCard>)
+                        ></RunningCampaignCard>)
                     }
                 </div>
             </div>
