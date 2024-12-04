@@ -1,6 +1,25 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContent } from "../../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContent);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                Swal.fire({
+                    position: "top-center",
+                    icon: "success",
+                    title: "Logout user successfully",
+                    showConfirmButton: true,
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
     const links = <>
         <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/'>Home</NavLink>
         <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/allCampaign'>All Campaign</NavLink>
@@ -10,7 +29,7 @@ const Navbar = () => {
 
     </>
     return (
-        <div className=" text-white py-3 bg-gray-900 opacity-80">
+        <div className=" text-white py-3 bg-gray-900 opacity-80 fixed w-full top-0 z-50">
             <div className="navbar max-w-[1200px] mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -45,40 +64,45 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-3">
+                    {
+                        user ?
+                            <div className="dropdown dropdown-end">
+                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 h-10 object-cover rounded-full">
+                                        <img src={user?.photoURL} alt="" />
+                                    </div>
+                                </div>
+                                <ul
+                                    tabIndex={0}
+                                    className="menu menu-sm dropdown-content bg-[#1d181f] text-white rounded-box z-[1] mt-2 w-52 py-4 px-2">
 
-                    {/* {
-                    user && user?.photoURL &&
-                    <div className="avatar online">
-                        <div className="w-12 h-12 rounded-full">
-                            <img src={user?.photoURL} />
-                        </div>
-                    </div>
-                }
-                {
-                    user ? <>
-                        <button onClick={handleLogOut} className="bg-white py-3 px-4 text-black hover:text-white font-bold hover:bg-[rgb(10,132,176)] transition-colors">
-                            Logout
-                        </button>
-                    </> :
-                        <Link to='/login'>
-                            <button className="bg-white py-3 px-8 text-black hover:text-white font-bold hover:bg-[rgb(10,132,176)] transition-colors">
-                                Login
-                            </button>
-                        </Link>
-                } */}
-                    <Link to='/login'>
-                        <button className="py-2 px-8 border-2  hover:text-white font-bold hover:bg-[rgb(37,168,214)] hover:border-[rgb(37,168,214)] transition-colors">
-                            Login
-                        </button>
-                    </Link>
-                    <Link to='/register'>
-                        <button className="py-2 px-8  text-white font-bold  
-                         border-[2px]
-                         bg-[rgb(37,168,214)]
-                                    border-transparent hover:border-[2px] hover:border-white hover:bg-transparent transition-all">
-                            Register
-                        </button>
-                    </Link>
+                                    <li><a>{user?.displayName}</a></li>
+                                    <li><a>{user?.email}</a></li>
+                                    <li className="text-center mx-auto ">
+                                        <button
+                                            onClick={handleLogOut}
+                                            className="py-2 px-12 mt-4 text-center mx-auto border-2  text-white font-bold hover:bg-[rgb(37,168,214)] hover:border-[rgb(37,168,214)] transition-colors rounded-none">
+                                            Log Out
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            :
+                            <>
+                                <Link to='/login'>
+                                    <button className="py-2 px-8 border-2  hover:text-white font-bold hover:bg-[rgb(37,168,214)] hover:border-[rgb(37,168,214)] transition-colors">
+                                        Login
+                                    </button>
+                                </Link>
+                                <Link to='/register'>
+                                    <button className="py-2 px-8  text-white font-bold border-[2px] bg-[rgb(37,168,214)] border-transparent hover:border-[2px] hover:border-white hover:bg-transparent transition-all">
+                                        Register
+                                    </button>
+                                </Link>
+                            </>
+                    }
+
                 </div>
             </div>
         </div>
