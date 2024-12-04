@@ -17,10 +17,10 @@ const RunningCampaign = () => {
         <div className="">
             <div className="py-20 max-w-[1200px] mx-auto ">
                 <Heading title="Running Campaigns"></Heading>
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
                     {
                         campaigns?.map(campaign => <RunningCampaignCard
-                            key={campaign.id}
+                            key={campaign._id}
                             campaign={campaign}
                         ></RunningCampaignCard>)
                     }

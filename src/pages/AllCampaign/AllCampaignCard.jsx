@@ -1,32 +1,29 @@
-import { MdLocationPin } from "react-icons/md";
+
 import { Link } from "react-router-dom";
 
 const AllCampaignCard = (campaign) => {
-    const { title, deadline, description, amount, photoUrl } = campaign.campaign
+    const { _id, title, deadline, description, amount, photoUrl } = campaign.campaign
     // console.log(campaign.campaign);
     return (
-        <div className=" bg-white mx-8 md:mx-0 border-[1px] hover:border-blue-600">
+        <div className=" bg-white mx-8 md:mx-0 border-[1px] hover:border-[rgb(37,168,214)] flex flex-col flex-grow justify-between">
             <figure>
                 <img
                     className="h-44 object-cover w-full"
                     src={photoUrl}
-                    alt="Shoes" />
+                    alt="Campaign" />
             </figure>
-            <div className="p-4 space-y-2">
+            <div className="p-4 space-y-2 flex flex-col flex-grow justify-between">
                 <h2 className="card-title text-base">{title}</h2>
                 <p className="text-gray-600">{description}</p>
-                <p className="flex gap-1">
-                    {/* <MdLocationPin></MdLocationPin> */}
-                    <span className="text-sm text-gray-600">Donation Amount: {amount} Tk</span>
-                </p>
-                <span className="text-sm text-gray-600">Date: {deadline}</span>
-                <div className="pt-8">
-                    <Link to='/'>
+                <p className="text-sm text-gray-600">Donation Amount: {amount} Tk</p>
+                <p className="text-sm text-gray-600">Date: {deadline}</p>
+                <div className="pt-2">
+                    <Link to={`/viewDetails/${_id}`}>
                         <button className="py-2 px-8 w-full text-white hover:text-black font-bold  
                          border-[2px]
                          bg-[rgb(37,168,214)]
                                     border-transparent hover:border-[1px] hover:border-blue-600 hover:bg-transparent transition-all">
-                            See More
+                            View Details
                         </button>
                     </Link>
                 </div>

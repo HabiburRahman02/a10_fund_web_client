@@ -1,17 +1,12 @@
 // import { useLoaderData } from "react-router-dom";
 import AllCampaignCard from "./AllCampaignCard";
 import Heading from "../../components/Heading/Heading";
-import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
+
 
 const AllCampaign = () => {
-    const [campaigns, setCampaigns] = useState([]);
-    // const campaigns = useLoaderData();
-    // console.log(campaigns);
-    useEffect(() => {
-        fetch('http://localhost:5000/campaign')
-            .then(res => res.json())
-            .then(data => setCampaigns(data))
-    }, [])
+    const campaigns = useLoaderData();
+
     return (
         <div className="">
             <div className="py-20 max-w-[1200px] mx-auto ">
@@ -19,7 +14,7 @@ const AllCampaign = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {
                         campaigns?.map(campaign => <AllCampaignCard
-                            key={campaign.id}
+                            key={campaign._id}
                             campaign={campaign}
                         ></AllCampaignCard>)
                     }
