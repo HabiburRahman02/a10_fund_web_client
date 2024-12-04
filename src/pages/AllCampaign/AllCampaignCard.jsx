@@ -17,7 +17,7 @@ const AllCampaignCard = (campaign) => {
                 <p>{des}</p>
                 <p className="flex gap-1 pb-8">
                     <MdLocationPin></MdLocationPin>
-                    <p className="text-sm">{location}</p>
+                    <span className="text-sm">{location}</span>
                 </p>
                 <div className="">
                     <Link to='/'>
