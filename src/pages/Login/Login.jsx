@@ -1,9 +1,13 @@
 
 import { Link } from 'react-router-dom';
 import bgImg from '../../assets/login//register.png'
+import SocialIcon from '../../components/SocialLogin/SocialLogin';
+import { useState } from 'react';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 
 const Login = () => {
+    const [show, setShow] = useState(false);
 
     // const handleSignIn = e => {
     //     e.preventDefault();
@@ -27,8 +31,16 @@ const Login = () => {
                     <div className="form-control">
                         <input type="email" name='email' placeholder="Email address*" className="input rounded-md py-7 input-bordered" required />
                     </div>
-                    <div className="form-control">
-                        <input type="password" name='password' placeholder="Password*" className="input rounded-md py-7 input-bordered" required />
+                    <div className="form-control relative">
+                        <input type={`${show ? 'text' : 'password'}`} name='password' placeholder="Password*" className="input rounded-md py-7 input-bordered" required />
+                        <div className='absolute top-5 right-5'>
+                            <div onClick={() => setShow(!show)}>
+                                {
+                                    show ? <FaEyeSlash className='text-xl'></FaEyeSlash> : <FaEye className='text-xl'></FaEye>
+
+                                }
+                            </div>
+                        </div>
                     </div>
                     <div className='flex items-center gap-1'>
                         <input type="checkbox" name="checked" id="" />
@@ -38,7 +50,7 @@ const Login = () => {
                         <button className="w-full py-4 rounded-md font-semibold bg-[#000000] text-white">Login</button>
                     </div>
                     <div className="divider">or </div>
-                    {/* <SocialIcon></SocialIcon> */}
+                    <SocialIcon></SocialIcon>
                     <div>
                         <p className='font-medium text-center'>Are you new? <Link className='text-blue-600' to='/register'>Register</Link></p>
                     </div>
