@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Heading from "../../components/Heading/Heading";
 import { AuthContent } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const AddNewCampaign = () => {
     const { user } = useContext(AuthContent);
@@ -14,7 +15,26 @@ const AddNewCampaign = () => {
         const amount = form.amount.value;
         const photoUrl = form.photoUrl.value;
         const description = form.description.value;
-        console.log(title, type, deadline, amount, photoUrl, description);
+        const campaign = { title, type, deadline, amount, photoUrl, description, email: user?.email, name: user?.displayName }
+
+        fetch('http://localhost:5000/campaign', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(campaign)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    Swal.fire({
+                        position: "top-center",
+                        icon: "success",
+                        title: "New campaign added successfully",
+                        showConfirmButton: true,
+                    });
+                }
+            })
 
     }
 
