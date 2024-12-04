@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const AllCampaignCard = (campaign) => {
     const { name, des, location, img } = campaign.campaign
-    console.log(campaign.campaign);
+    // console.log(campaign.campaign);
     return (
         <div className=" bg-white mx-8 md:mx-0 border-[1px] hover:border-blue-600">
             <figure>

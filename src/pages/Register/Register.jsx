@@ -1,5 +1,5 @@
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import bgImg from '../../assets/login/register.png'
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useContext, useState } from 'react';
@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
 const Register = () => {
     const { createUser } = useContext(AuthContent);
     const [show, setShow] = useState(false);
+    const navigate = useNavigate();
 
 
     const handleRegister = e => {
@@ -25,6 +26,26 @@ const Register = () => {
 
 
         // validation
+        if (password.length < 6) {
+            Swal.fire({
+                position: "top-center",
+                icon: "warning",
+                title: "Password must be 6 character or longer ",
+                showConfirmButton: true,
+            });
+            return;
+        }
+
+        const regex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+        if (!regex.test(password)) {
+            Swal.fire({
+                position: "top-center",
+                icon: "warning",
+                title: "Password must be One uppercase & one lowercase",
+                showConfirmButton: true,
+            });
+            return;
+        }
 
         // create a user
         createUser(email, password)
@@ -34,11 +55,18 @@ const Register = () => {
                     icon: "success",
                     title: "Create a user successfully",
                     showConfirmButton: false,
-                    timer: 1500
+                    timer: 2000
                 });
+                navigate('/')
             })
             .catch(error => {
-                console.log(error);
+                console.log(error.message);
+                Swal.fire({
+                    position: "top-center",
+                    icon: "warning",
+                    title: `${error.message}`,
+                    showConfirmButton: true,
+                });
             })
     }
 

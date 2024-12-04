@@ -1,29 +1,51 @@
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import bgImg from '../../assets/login//register.png'
 import SocialIcon from '../../components/SocialLogin/SocialLogin';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import Swal from 'sweetalert2';
+import { AuthContent } from '../../Provider/AuthProvider';
 
 
 const Login = () => {
+    const { loginUser } = useContext(AuthContent);
+    const navigate = useNavigate();
+
     const [show, setShow] = useState(false);
+    const handleLogin = e => {
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        const checked = form.checked.checked;
 
-    // const handleSignIn = e => {
-    //     e.preventDefault();
-    //     const form = e.target;
-
-    //     const email = form.email.value;
-    //     const password = form.password.value;
-    //     const checked = form.checked.checked;
-    //     const user = { email, password, checked }
-    //     console.log(user)
-    // }
+        loginUser(email, password)
+            .then(() => {
+                Swal.fire({
+                    position: "top-center",
+                    icon: "success",
+                    title: "User login successfully",
+                    showConfirmButton: false,
+                    timer: 2000
+                });
+                navigate('/')
+            })
+            .catch(error => {
+                console.log(error.message);
+                Swal.fire({
+                    position: "top-center",
+                    icon: "warning",
+                    title: `${error.message}`,
+                    showConfirmButton: true,
+                });
+            })
+    }
 
     return (
         <div className='md:flex gap-28 max-w-[1200px] mx-auto' >
             <div className='md:w-1/2 md:flex items-center justify-center'>
-                <form className="bg-[#F5F5F5] px-6 py-12 space-y-6 w-full">
+                <form onSubmit={handleLogin} className="bg-[#F5F5F5] px-6 py-12 space-y-6 w-full">
                     <div>
                         <h6 className='font-bold text-2xl'>Welcome Back!</h6>
                         <p className='text-[#707070] font-medium'>Enter your Credentials to access your account</p>
