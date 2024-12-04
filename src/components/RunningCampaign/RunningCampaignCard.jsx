@@ -1,9 +1,10 @@
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const RunningCampaignCard = (campaign) => {
-    const { title, deadline, description, amount, photoUrl } = campaign.campaign
+    const { _id, title, deadline, description, amount, photoUrl } = campaign.campaign
     const [hover, setHover] = useState(false);
     console.log(hover);
     return (
@@ -28,8 +29,10 @@ const RunningCampaignCard = (campaign) => {
                     <p className="text-sm text-gray-600">Date: {deadline}</p>
                 </div>
                 <div className="pt-2">
-                    <button
-                        className={`py-5 w-full transition-all ${hover ? 'bg-[rgb(37,168,214)] text-white' : 'bg-gray-100'}`}>See More</button>
+                    <Link to={`/viewDetails/${_id}`}>
+                        <button
+                            className={`py-5 w-full transition-all ${hover ? 'bg-[rgb(37,168,214)] text-white' : 'bg-gray-100'}`}>See More</button>
+                    </Link>
                 </div>
             </div>
         </div>
