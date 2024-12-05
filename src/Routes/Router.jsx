@@ -9,11 +9,13 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import ViewDetails from "../components/ViewDetails/ViewDetails";
 import MyCampaign from "../pages/MyCampaign/MyCampaign";
 import UpdateCampaign from "../components/UpdateCampaign/UpdateCampaign";
+import NotFound from "../components/NotFound/NotFound";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
+        errorElement: <NotFound></NotFound>,
         children: [
             {
                 path: '/',
