@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 
 
 const Register = () => {
-    const { createUser } = useContext(AuthContent);
+    const { createUser, updateUserProfile } = useContext(AuthContent);
     const [show, setShow] = useState(false);
     const navigate = useNavigate();
 
@@ -18,11 +18,10 @@ const Register = () => {
         const form = e.target;
 
         const name = form.name.value;
-        const photoUrl = form.email.value;
+        const photoUrl = form.photoUrl.value;
         const email = form.email.value;
         const password = form.password.value;
-        const checked = form.checked.checked;
-        const user = { name, photoUrl, email, password, checked }
+        // const checked = form.checked.checked;
 
 
         // validation
@@ -50,6 +49,12 @@ const Register = () => {
         // create a user
         createUser(email, password)
             .then(() => {
+                // update user profile
+                updateUserProfile(name, photoUrl)
+                    .then(result => {
+                        console.log(result);
+                    })
+
                 Swal.fire({
                     position: "top-center",
                     icon: "success",

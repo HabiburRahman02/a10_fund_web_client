@@ -44,7 +44,7 @@ const AllCampaign = () => {
                                                 </div>
                                             </td>
                                             <td>{campaign.deadline}</td>
-                                            <td>{campaign.amount}</td>
+                                            <td>{campaign.amount} Tk</td>
                                             <td>{campaign.type}</td>
 
                                         </tr>
