@@ -11,16 +11,26 @@ const ViewDetails = () => {
     console.log(params);
     console.log('campaign', campaign);
 
-    const { title, description, amount, photoUrl } = campaign
-    const newUser = { name: user?.displayName, email: user?.email }
+    const { title, description, amount, photoUrl, type, deadline } = campaign
+    const NewDonation = {
+        title,
+        type,
+        deadline,
+        amount,
+        photoUrl,
+        description,
+        email: user?.email,
+        name: user?.displayName
+    }
+
 
     const handleDonateNow = () => {
-        fetch('http://localhost:5000/user', {
+        fetch(`http://localhost:5000/donation/${user?.email}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(newUser)
+            body: JSON.stringify(NewDonation)
         })
             .then(res => res.json())
             .then(data => {
