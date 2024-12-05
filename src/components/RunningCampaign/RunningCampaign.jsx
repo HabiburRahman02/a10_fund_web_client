@@ -3,12 +3,11 @@ import Heading from "../Heading/Heading";
 import RunningCampaignCard from "./RunningCampaignCard";
 
 const RunningCampaign = () => {
-
     const [campaigns, setCampaigns] = useState([]);
     console.log(campaigns);
 
     useEffect(() => {
-        fetch('http://localhost:5000/campaign/running')
+        fetch('http://localhost:5000/campaignByRunning/running')
             .then(res => res.json())
             .then(data => setCampaigns(data))
     }, [])

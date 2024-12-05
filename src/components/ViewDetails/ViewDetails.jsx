@@ -1,12 +1,16 @@
 import { useContext } from "react";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { AuthContent } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const ViewDetails = () => {
     const { user } = useContext(AuthContent);
-    const campaign = useLoaderData();
     const navigate = useNavigate();
+    const campaign = useLoaderData();
+    const params = useParams();
+    console.log(params);
+    console.log('campaign', campaign);
+
     const { title, description, amount, photoUrl } = campaign
     const newUser = { name: user?.displayName, email: user?.email }
 

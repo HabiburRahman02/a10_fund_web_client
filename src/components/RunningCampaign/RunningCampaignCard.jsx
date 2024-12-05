@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const RunningCampaignCard = (campaign) => {
     const { _id, title, deadline, description, amount, photoUrl } = campaign.campaign
     const [hover, setHover] = useState(false);
-    console.log(hover);
+
     return (
         <div
             onMouseEnter={() => setHover(true)}

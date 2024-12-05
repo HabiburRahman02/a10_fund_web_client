@@ -5,6 +5,7 @@ import { Navigate } from "react-router-dom";
 const PrivateRoute = ({ children }) => {
     const { user, loading } = useContext(AuthContent);
 
+
     if (loading) {
         return <div className="mx-auto text-center my-20">
             <span className="loading loading-spinner loading-lg"></span>

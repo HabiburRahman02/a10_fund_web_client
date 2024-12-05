@@ -46,9 +46,11 @@ const AllCampaign = () => {
                                             <td>{campaign.amount} Tk</td>
                                             <td>{campaign.type}</td>
                                             <td>
+
                                                 <Link to={`/viewDetails/${campaign._id}`}>
-                                                    <button
-                                                        className={`py-3 w-full bg-[rgb(37,168,214)] text-white`}>See More</button>
+                                                    <button className='w-full py-4 bg-[rgb(37,168,214)] border-2 border-white hover:border-[rgb(37,168,214)] hover:bg-white transition-all hover:text-[rgb(37,168,214)] text-white'>
+                                                        See More
+                                                    </button>
                                                 </Link>
                                             </td>
                                         </tr>

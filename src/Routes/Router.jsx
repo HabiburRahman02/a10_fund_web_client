@@ -8,6 +8,7 @@ import AddNewCampaign from "../pages/AddNewCampaign/AddNewCampaign";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import ViewDetails from "../components/ViewDetails/ViewDetails";
 import MyCampaign from "../pages/MyCampaign/MyCampaign";
+import UpdateCampaign from "../components/UpdateCampaign/UpdateCampaign";
 
 const router = createBrowserRouter([
     {
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
             {
                 path: '/viewDetails/:id',
                 element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/campaign/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/campaignById/${params.id}`)
             },
             {
                 path: '/login',
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
             {
                 path: '/myCampaign',
                 element: <PrivateRoute><MyCampaign></MyCampaign></PrivateRoute>,
+            },
+            {
+                path: '/updateCampaign/:id',
+                element: <PrivateRoute><UpdateCampaign></UpdateCampaign></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/campaignById/${params.id}`)
             },
         ]
     },

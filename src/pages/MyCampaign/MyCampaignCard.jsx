@@ -1,5 +1,6 @@
 import { FaEdit } from "react-icons/fa";
 import { FaDeleteLeft } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const MyCampaignCard = ({ campaign, i, campaigns, setCampaigns }) => {
@@ -57,12 +58,21 @@ const MyCampaignCard = ({ campaign, i, campaigns, setCampaigns }) => {
             <td>{type}</td>
             <td >
                 <div className="flex gap-3 items-center justify-center">
-                    <button className='p-2 bg-[rgb(37,168,214)] border-2 border-white hover:border-[rgb(37,168,214)] hover:bg-white transition-all hover:text-[rgb(37,168,214)] text-white'>
+
+                    {/* <Modal></Modal>
+                    <button onClick={() => document.getElementById('my_modal_4').showModal()} className='p-2 bg-[rgb(37,168,214)] border-2 border-white hover:border-[rgb(37,168,214)] hover:bg-white transition-all hover:text-[rgb(37,168,214)] text-white'>
                         <FaEdit className="text-xl"></FaEdit>
-                    </button>
-                    <button className='p-2 bg-[rgb(37,168,214)] border-2 border-white hover:border-[rgb(37,168,214)] hover:bg-white transition-all hover:text-[rgb(37,168,214)] text-white'>
+                    </button> */}
+
+                    <Link to={`/updateCampaign/${_id}`}>
+                        <button className='p-2 bg-[rgb(37,168,214)] border-2 border-white hover:border-[rgb(37,168,214)] hover:bg-white transition-all hover:text-[rgb(37,168,214)] text-white'>
+                            <FaEdit className="text-xl"></FaEdit>
+                        </button>
+                    </Link>
+                    <button
+                        onClick={() => handleDeleteCampaign(_id)}
+                        className='p-2 bg-[rgb(37,168,214)] border-2 border-white hover:border-[rgb(37,168,214)] hover:bg-white transition-all hover:text-[rgb(37,168,214)] text-white'>
                         <FaDeleteLeft
-                            onClick={() => handleDeleteCampaign(_id)}
                             className="text-xl"></FaDeleteLeft>
                     </button>
                 </div>

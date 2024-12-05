@@ -22,7 +22,7 @@ const MyCampaign = () => {
     return (
         <div className="">
             <div className="py-20 max-w-[1200px] mx-auto ">
-                <Heading title="All Campaigns"></Heading>
+                <Heading title="My Campaigns"></Heading>
                 <div>
                     <div className="overflow-x-auto">
                         <table className="table bg-white rounded-none">
