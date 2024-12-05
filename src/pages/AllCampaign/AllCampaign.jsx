@@ -1,7 +1,5 @@
-// import { useLoaderData } from "react-router-dom";
-import AllCampaignCard from "./AllCampaignCard";
 import Heading from "../../components/Heading/Heading";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const AllCampaign = () => {
@@ -21,6 +19,7 @@ const AllCampaign = () => {
                                     <th>Date</th>
                                     <th>Donation Amount</th>
                                     <th>Donation Type</th>
+                                    <th>Details</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -46,7 +45,12 @@ const AllCampaign = () => {
                                             <td>{campaign.deadline}</td>
                                             <td>{campaign.amount} Tk</td>
                                             <td>{campaign.type}</td>
-
+                                            <td>
+                                                <Link to={`/viewDetails/${campaign._id}`}>
+                                                    <button
+                                                        className={`py-3 w-full bg-[rgb(37,168,214)] text-white`}>See More</button>
+                                                </Link>
+                                            </td>
                                         </tr>
                                     )
                                 }

@@ -5,8 +5,8 @@ import RunningCampaignCard from "./RunningCampaignCard";
 const RunningCampaign = () => {
 
     const [campaigns, setCampaigns] = useState([]);
-    // const campaigns = useLoaderData();
-    // console.log(campaigns);
+    console.log(campaigns);
+
     useEffect(() => {
         fetch('http://localhost:5000/campaign/running')
             .then(res => res.json())
