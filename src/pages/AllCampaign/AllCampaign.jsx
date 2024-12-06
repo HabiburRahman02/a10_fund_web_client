@@ -6,7 +6,7 @@ const AllCampaign = () => {
     const campaigns = useLoaderData();
     return (
         <div className="">
-            <div className="py-20 max-w-[1200px] mx-auto ">
+            <div className="py-10 max-w-[1200px] mx-auto ">
                 <Heading title="All Campaigns"></Heading>
                 <div>
                     <div className="overflow-x-auto">

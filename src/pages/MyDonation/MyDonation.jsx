@@ -20,7 +20,7 @@ const MyDonation = () => {
     }, [])
     return (
         <div className="">
-            <div className="py-20 max-w-[1200px] mx-auto ">
+            <div className="py-10 max-w-[1200px] mx-auto ">
                 <Heading title="My Donation"></Heading>
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {

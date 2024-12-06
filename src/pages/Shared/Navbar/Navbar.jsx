@@ -1,10 +1,13 @@
 import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { AuthContent } from "../../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContent);
+    const location = useLocation();
+    const matched = location.pathname === '/'
+    console.log(matched);
 
     const handleLogOut = () => {
         logOut()
@@ -29,7 +32,7 @@ const Navbar = () => {
 
     </>
     return (
-        <div className=" text-white py-3 bg-gray-900 opacity-80">
+        <div className={`text-white py-3 ${matched ? 'fixed top-0 z-50 w-full' : 'bg-[#1d181f]'}`}>
             <div className="navbar max-w-[1200px] mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -49,7 +52,7 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="bg-[rgb(37,168,214)] text-white menu menu-sm dropdown-content rounded-box z-[1] mt-3 space-y-3 w-60 p-4 shadow">
+                            className="bg-[#1d181f] text-white menu menu-sm dropdown-content rounded-box z-[1] mt-3 space-y-3 w-60 p-4 shadow">
                             {links}
                         </ul>
                     </div>
@@ -68,8 +71,8 @@ const Navbar = () => {
                         user ?
                             <div className="dropdown dropdown-end">
                                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                                    <div className="w-10 h-10 object-cover rounded-full">
-                                        <img src={user?.photoURL} alt="" />
+                                    <div className="w-10 h-10 object-cover rounded-full border-2 border-[rgb(37,168,214)] p-1">
+                                        <img className="rounded-full " src={user?.photoURL} alt="" />
                                     </div>
                                 </div>
                                 <ul
