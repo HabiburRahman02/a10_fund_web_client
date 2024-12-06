@@ -11,7 +11,7 @@ const RunningCampaignCard = (campaign) => {
         <div
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
-            className=" bg-white mx-8 md:mx-0 border-[1px] hover:border-[rgb(37,168,214)] flex flex-col justify-between flex-grow">
+            className="dark:bg-gray-900 dark:text-white bg-white mx-8 md:mx-0 border-[1px] hover:border-[rgb(37,168,214)] flex flex-col justify-between flex-grow">
             <figure>
                 <img
                     className="h-44 object-cover w-full"
@@ -31,7 +31,7 @@ const RunningCampaignCard = (campaign) => {
                 <div className="pt-2">
                     <Link to={`/viewDetails/${_id}`}>
                         <button
-                            className={`py-5 w-full transition-all ${hover ? 'bg-[rgb(37,168,214)] text-white' : 'bg-gray-100'}`}>See More</button>
+                            className={`py-5 w-full transition-all  ${hover ? 'bg-[rgb(37,168,214)] text-white' : 'dark:bg-gray-100 dark:text-black'}`}>See More</button>
                     </Link>
                 </div>
             </div>

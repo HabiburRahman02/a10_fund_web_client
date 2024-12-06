@@ -7,7 +7,10 @@ const Navbar = () => {
     const { user, logOut } = useContext(AuthContent);
     const location = useLocation();
     const matched = location.pathname === '/'
-    console.log(matched);
+
+    const handleThemeChange = () => {
+        document.documentElement.classList.toggle('dark');
+    }
 
     const handleLogOut = () => {
         logOut()
@@ -23,13 +26,14 @@ const Navbar = () => {
                 console.log(error);
             })
     }
+
     const links = <>
         <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/'>Home</NavLink>
         <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/allCampaign'>All Campaign</NavLink>
         <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/addNewCampaign'>Add New Campaign</NavLink>
         <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/myCampaign'>My Campaign</NavLink>
         <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/myDonation'>My Donation</NavLink>
-
+        <button onClick={handleThemeChange} className="bg-green-500">Toggle</button>
     </>
     return (
         <div className={`text-white py-3 ${matched ? 'fixed top-0 z-50 w-full' : 'bg-[#1d181f]'}`}>

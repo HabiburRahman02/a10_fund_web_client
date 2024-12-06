@@ -10,7 +10,7 @@ const AllCampaign = () => {
                 <Heading title="All Campaigns"></Heading>
                 <div>
                     <div className="overflow-x-auto">
-                        <table className="table bg-white rounded-none">
+                        <table className="table bg-white dark:bg-gray-900 dark:text-white rounded-none">
                             {/* head */}
                             <thead>
                                 <tr >
@@ -26,7 +26,7 @@ const AllCampaign = () => {
 
                                 {
                                     campaigns.map((campaign, i) =>
-                                        <tr className=" hover transition-all" key={campaign._id}>
+                                        <tr className=" hover:bg-gray-100 hover:text-black transition-all" key={campaign._id}>
                                             <td>{i + 1}</td>
                                             <td>
                                                 <div className="flex items-center gap-3 py-4">
