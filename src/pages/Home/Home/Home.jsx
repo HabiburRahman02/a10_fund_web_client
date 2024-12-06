@@ -1,3 +1,4 @@
+import OurCompanies from "../../../components/OurCompanies/OurCompanies";
 import RunningCampaign from "../../../components/RunningCampaign/RunningCampaign";
 import StartUp from "../../../components/StartUp/StartUp";
 import Banner from "../Slider/Slider";
@@ -9,6 +10,7 @@ const Home = () => {
             <Banner></Banner>
             <RunningCampaign></RunningCampaign>
             <StartUp></StartUp>
+            <OurCompanies></OurCompanies>
         </div>
     );
 };

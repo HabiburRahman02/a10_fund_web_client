@@ -2,7 +2,7 @@ import { FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <div className="bg-[#1d181f] mt-20">
+        <div className="bg-[#1d181f]">
             <footer className="footer md:flex justify-between py-20 max-w-[1200px] mx-auto font-bold  text-[#979797] p-10">
                 <nav>
                     <h6 className="footer-title">Services</h6>
@@ -25,7 +25,7 @@ const Footer = () => {
                     <a className="hover:text-white transition-all">Cookie policy</a>
                 </nav>
                 <nav>
-                    <h6 className="footer-title">Legal</h6>
+                    <h6 className="footer-title">Social</h6>
                     <div className="flex gap-4">
                         <FaTwitter className="text-2xl text-white"></FaTwitter>
                         <FaLinkedin className="text-2xl text-white"></FaLinkedin>
