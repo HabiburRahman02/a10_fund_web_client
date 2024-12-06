@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import Heading from "../Heading/Heading";
 import RunningCampaignCard from "./RunningCampaignCard";
+import { Fade } from "react-awesome-reveal";
 
 const RunningCampaign = () => {
     const [campaigns, setCampaigns] = useState([]);
-    console.log(campaigns);
+    // console.log(campaigns);
 
     useEffect(() => {
         fetch('http://localhost:5000/campaignByRunning/running')
@@ -13,19 +14,21 @@ const RunningCampaign = () => {
     }, [])
 
     return (
-        <div className="">
-            <div className="py-20 max-w-[1200px] mx-auto ">
-                <Heading title="Running Campaigns"></Heading>
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
-                    {
-                        campaigns?.map(campaign => <RunningCampaignCard
-                            key={campaign._id}
-                            campaign={campaign}
-                        ></RunningCampaignCard>)
-                    }
+        <Fade direction="down" duration={2000}>
+            <div className="">
+                <div className="py-20 max-w-[1200px] mx-auto ">
+                    <Heading title="Running Campaigns"></Heading>
+                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
+                        {
+                            campaigns?.map(campaign => <RunningCampaignCard
+                                key={campaign._id}
+                                campaign={campaign}
+                            ></RunningCampaignCard>)
+                        }
+                    </div>
                 </div>
             </div>
-        </div>
+        </Fade>
     );
 
 };

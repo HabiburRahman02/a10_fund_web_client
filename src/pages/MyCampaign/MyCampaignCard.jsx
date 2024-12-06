@@ -37,7 +37,7 @@ const MyCampaignCard = ({ campaign, i, campaigns, setCampaigns }) => {
         });
     }
     return (
-        <tr className=" hover transition-all" key={campaign._id}>
+        <tr className=" hover:text-black hover:bg-gray-100 transition-all" key={campaign._id}>
             <td>{i + 1}</td>
             <td>
                 <div className="flex items-center gap-3 py-4">

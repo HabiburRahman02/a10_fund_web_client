@@ -4,5 +4,5 @@
 
 body{
     font-family: Georgia,Times New Roman,serif;
-    overflow-y: scroll;
+    overflow: scroll;
 }

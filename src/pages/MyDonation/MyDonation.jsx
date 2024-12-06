@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContent } from "../../Provider/AuthProvider";
 import Heading from "../../components/Heading/Heading";
 import MyDonationCard from "./MydonationCard";
+import { Fade } from "react-awesome-reveal";
 
 const MyDonation = () => {
     const { user } = useContext(AuthContent);
@@ -19,19 +20,21 @@ const MyDonation = () => {
             });
     }, [])
     return (
-        <div className="">
-            <div className="py-10 max-w-[1200px] mx-auto ">
-                <Heading title="My Donation"></Heading>
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {
-                        donations?.map(donation => <MyDonationCard
-                            key={donation._id}
-                            donation={donation}
-                        ></MyDonationCard>)
-                    }
+        <Fade duration={2000} direction="down">
+            <div className="">
+                <div className="py-10 max-w-[1200px] mx-auto ">
+                    <Heading title="My Donation"></Heading>
+                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                        {
+                            donations?.map(donation => <MyDonationCard
+                                key={donation._id}
+                                donation={donation}
+                            ></MyDonationCard>)
+                        }
+                    </div>
                 </div>
             </div>
-        </div>
+        </Fade>
     );
 };
 

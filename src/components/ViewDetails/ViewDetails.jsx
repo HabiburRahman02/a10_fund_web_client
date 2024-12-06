@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useLoaderData, useNavigate, useParams } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContent } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 
@@ -7,9 +7,6 @@ const ViewDetails = () => {
     const { user } = useContext(AuthContent);
     const navigate = useNavigate();
     const campaign = useLoaderData();
-    const params = useParams();
-    console.log(params);
-    console.log('campaign', campaign);
 
     const { title, description, amount, photoUrl, type, deadline } = campaign
     const NewDonation = {
@@ -46,7 +43,7 @@ const ViewDetails = () => {
             })
     }
     return (
-        <div className="max-w-[1200px] mx-auto pt-20">
+        <div className="max-w-[1200px] mx-auto py-20">
             <div className="p-4 md:p-8 border bg-white lg:w-1/2 mx-auto">
                 <img src={photoUrl} alt={title} className="w-full h-64 object-cover" />
                 <h2 className="text-2xl font-bold mt-4">{title}</h2>

@@ -1,10 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { AuthContent } from "../../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import logo from '../../../assets/logo/logo.jpg'
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContent);
+    const [onHover, setOnHover] = useState(false);
     const location = useLocation();
     const matched = location.pathname === '/'
 
@@ -33,7 +35,6 @@ const Navbar = () => {
         <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/addNewCampaign'>Add New Campaign</NavLink>
         <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/myCampaign'>My Campaign</NavLink>
         <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/myDonation'>My Donation</NavLink>
-        <button onClick={handleThemeChange} className="bg-green-500">Toggle</button>
     </>
     return (
         <div className={`text-white py-3 ${matched ? 'fixed top-0 z-50 w-full' : 'bg-[#1d181f]'}`}>
@@ -61,7 +62,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <Link to='/' className="flex items-center gap-2">
-                        <img className="h-12 w-12 bg-white rounded-full" alt="" />
+                        <img src={logo} className="h-12 w-12 bg-white rounded-full" alt="" />
                         <h4 className="text-2xl font-semibold hidden md:block" to='/'>CrowdCube</h4>
                     </Link>
                 </div>
@@ -73,26 +74,29 @@ const Navbar = () => {
                 <div className="navbar-end gap-3">
                     {
                         user ?
-                            <div className="dropdown dropdown-end">
-                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                                    <div className="w-10 h-10 object-cover rounded-full border-2 border-[rgb(37,168,214)] p-1">
-                                        <img className="rounded-full " src={user?.photoURL} alt="" />
+                            <div className="flex items-center gap-2">
+                                <input onClick={handleThemeChange} type="checkbox" className="toggle text-blue-500" />
+                                <div className="dropdown dropdown-end">
+                                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                        <div className="w-10 h-10 object-cover rounded-full border-2 border-[rgb(37,168,214)] p-1">
+                                            <img className="rounded-full " src={user?.photoURL} alt="" />
+                                        </div>
                                     </div>
-                                </div>
-                                <ul
-                                    tabIndex={0}
-                                    className="menu menu-sm dropdown-content bg-[#1d181f] text-white rounded-box z-[1] mt-2 w-52 py-4 px-2">
+                                    <ul
+                                        tabIndex={0}
+                                        className="menu menu-sm dropdown-content bg-[#1d181f] text-white rounded-box z-[1] mt-2 w-52 py-4 px-2">
 
-                                    <li><a>{user?.displayName}</a></li>
-                                    <li><a>{user?.email}</a></li>
-                                    <li className="text-center mx-auto ">
-                                        <button
-                                            onClick={handleLogOut}
-                                            className="py-2 px-12 mt-4 text-center mx-auto border-2  text-white font-bold hover:bg-[rgb(37,168,214)] hover:border-[rgb(37,168,214)] transition-colors rounded-none">
-                                            Log Out
-                                        </button>
-                                    </li>
-                                </ul>
+                                        <li><a>{user?.displayName}</a></li>
+                                        <li><a>{user?.email}</a></li>
+                                        <li className="text-center mx-auto ">
+                                            <button
+                                                onClick={handleLogOut}
+                                                className="py-2 px-12 mt-4 text-center mx-auto border-2  text-white font-bold hover:bg-[rgb(37,168,214)] hover:border-[rgb(37,168,214)] transition-colors rounded-none">
+                                                Log Out
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
 
                             :
