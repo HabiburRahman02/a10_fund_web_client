@@ -1,0 +1,54 @@
+import selfImg from '../../assets/startup/self-managed-icon.svg'
+import guidedImg from '../../assets/startup/guided-fundraise-icon.svg'
+import { Link } from 'react-router-dom';
+
+const StartUp = () => {
+    return (
+        <div className="bg-[#242424]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1200px] mx-auto py-20">
+                <div className="card bg-[#ECF0F1] w-full shadow-xl p-10">
+                    <figure>
+                        <img
+                            src={selfImg}
+                            alt="Shoes" />
+                    </figure>
+                    <h2 className="card-title text-2xl uppercase text-[rgb(29,146,189)] text-center mx-auto mt-2">Self-Managed</h2>
+                    <div className="card-body text-center mx-auto">
+                        <p className='text-2xl text-gray-500'>Id like to use Fundable to host my fundraise to collect investor commitments from my network.</p>
+                        <div className="card-actions justify-center">
+                            <Link to='/'>
+                                <button className="uppercase mt-2 bg-[rgb(37,168,214)] py-3 px-8  text-white font-bold 
+                                    border-[2px]
+                                    border-transparent hover:border-[2px] hover:border-[rgb(37,168,214)] hover:text-[rgb(37,168,214)] hover:bg-transparent transition-all">
+                                    Learn More
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+                <div className="card bg-[#ECF0F1] w-full shadow-xl p-10">
+                    <figure>
+                        <img
+                            src={selfImg}
+                            alt="Shoes" />
+                    </figure>
+                    <h2 className="card-title text-2xl uppercase text-[rgb(29,146,189)] text-center mx-auto mt-2">Guided Fundraise</h2>
+                    <div className="card-body text-center mx-auto">
+                        <p className='text-2xl text-gray-500'>Id like the Fundable team to create my pitch deck, research prospective investors that may be interested, and support me throughout the process.</p>
+                        <div className="card-actions justify-center">
+                            <Link to='/'>
+                                <button className="uppercase mt-2 bg-[rgb(37,168,214)] py-3 px-8  text-white font-bold 
+                                    border-[2px]
+                                    border-transparent hover:border-[2px] hover:border-[rgb(37,168,214)] hover:text-[rgb(37,168,214)] hover:bg-transparent transition-all">
+                                    Learn More
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default StartUp;

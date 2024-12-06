@@ -12,7 +12,7 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const Banner = () => {
     return (
-        <div className='mb-20'>
+        <div className=''>
             <AutoplaySlider
                 play={true}
                 cancelOnInteraction={false}

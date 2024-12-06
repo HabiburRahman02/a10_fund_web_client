@@ -1,4 +1,5 @@
 import RunningCampaign from "../../../components/RunningCampaign/RunningCampaign";
+import StartUp from "../../../components/StartUp/StartUp";
 import Banner from "../Slider/Slider";
 
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <RunningCampaign></RunningCampaign>
+            <StartUp></StartUp>
         </div>
     );
 };

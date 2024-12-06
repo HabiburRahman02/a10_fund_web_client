@@ -10,8 +10,8 @@ const MyDonationCard = ({ donation }) => {
                     className="h-44 object-cover w-full"
                     src={photoUrl}
                     alt="Campaign" />
-                <div className="bg-blue-500 py-1 text-center mx-auto">
-                    <span className="w-full uppercase text-xs text-white font-bold">Donate Already</span>
+                <div className="bg-[rgb(37,168,214)] py-1 text-center mx-auto">
+                    <span className="w-full capitalize text-base text-white font-bold">Donate Already</span>
                 </div>
             </figure>
             <div className="space-y-2 flex flex-col justify-between flex-grow">
