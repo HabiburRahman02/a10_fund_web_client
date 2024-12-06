@@ -32,7 +32,7 @@ const ViewDetails = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    navigate('/allCampaign')
+                    navigate(-1)
                     Swal.fire({
                         position: "top-center",
                         icon: "success",

@@ -9,7 +9,10 @@ const AllCampaign = () => {
         <Slide duration={2000}>
             <div className="">
                 <div className="py-10 max-w-[1200px] mx-auto ">
-                    <Heading title="All Campaigns"></Heading>
+                    <div className="flex justify-between">
+                        <Heading title="All Campaigns"></Heading>
+                        <button className="btn btn-secondary">Sort</button>
+                    </div>
                     <div>
                         <div className="overflow-x-auto">
                             <table className="table bg-white dark:bg-gray-900 dark:text-white rounded-none">
