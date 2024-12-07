@@ -25,12 +25,12 @@ const router = createBrowserRouter([
             {
                 path: '/allCampaign',
                 element: <AllCampaign></AllCampaign>,
-                loader: () => fetch('http://localhost:5000/campaign')
+                loader: () => fetch('https://funding-server-ashen.vercel.app/campaign')
             },
             {
                 path: '/viewDetails/:id',
                 element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/campaignById/${params.id}`)
+                loader: ({ params }) => fetch(`https://funding-server-ashen.vercel.app/campaignById/${params.id}`)
             },
             {
                 path: '/login',
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
             {
                 path: '/updateCampaign/:id',
                 element: <PrivateRoute><UpdateCampaign></UpdateCampaign></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/campaignById/${params.id}`)
+                loader: ({ params }) => fetch(`https://funding-server-ashen.vercel.app/campaignById/${params.id}`)
             },
             {
                 path: '/myDonation',

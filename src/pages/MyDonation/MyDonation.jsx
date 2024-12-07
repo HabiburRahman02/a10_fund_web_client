@@ -10,7 +10,7 @@ const MyDonation = () => {
     console.log(donations);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/donation/${user?.email}`)
+        fetch(`https://funding-server-ashen.vercel.app/donation/${user?.email}`)
             .then(res => res.json())
             .then((data) => {
                 setDonations(data)

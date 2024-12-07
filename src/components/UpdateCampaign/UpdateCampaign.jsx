@@ -20,7 +20,7 @@ const UpdateCampaign = () => {
         const photoUrl = form.photoUrl.value;
         const description = form.description.value;
         const updatedCampaign = { title, type, deadline, amount, photoUrl, description }
-        fetch(`http://localhost:5000/campaign/${_id}`, {
+        fetch(`https://funding-server-ashen.vercel.app/campaign/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

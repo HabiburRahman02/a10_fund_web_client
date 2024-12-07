@@ -10,7 +10,7 @@ const MyCampaign = () => {
     console.log(campaigns);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/campaign/${user?.email}`)
+        fetch(`https://funding-server-ashen.vercel.app/campaign/${user?.email}`)
             .then(res => res.json())
             .then((data) => {
                 setCampaigns(data)
@@ -18,7 +18,7 @@ const MyCampaign = () => {
             .catch((error) => {
                 console.error("Error fetching campaigns:", error);
             });
-    }, [user?.email]) // user.email পরিবর্তন হলে আবার ফেচ হবে
+    }, [user?.email])
 
     return (
         <Fade duration={2000} direction="right">
@@ -41,7 +41,7 @@ const MyCampaign = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                        campaigns.map((campaign, i) => (
+                                        campaigns?.map((campaign, i) => (
                                             <MyCampaignCard
                                                 key={campaign._id}
                                                 campaign={campaign}

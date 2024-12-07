@@ -8,7 +8,7 @@ const Modal = () => {
     console.log(params);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/campaignById/6751615cb24d1bc39ee35e54`)
+        fetch(`https://funding-server-ashen.vercel.app/campaignById/6751615cb24d1bc39ee35e54`)
             .then(res => res.json())
         // .then(data => setCampaigns(data))
     }, [])

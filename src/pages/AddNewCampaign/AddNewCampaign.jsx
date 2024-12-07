@@ -18,7 +18,7 @@ const AddNewCampaign = () => {
         const description = form.description.value;
         const campaign = { title, type, deadline, amount, photoUrl, description, email: user?.email, name: user?.displayName }
 
-        fetch('http://localhost:5000/campaign', {
+        fetch('https://funding-server-ashen.vercel.app/campaign', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -8,7 +8,7 @@ const RunningCampaign = () => {
     // console.log(campaigns);
 
     useEffect(() => {
-        fetch('http://localhost:5000/campaignByRunning/running')
+        fetch('https://funding-server-ashen.vercel.app/campaignByRunning/running')
             .then(res => res.json())
             .then(data => setCampaigns(data))
     }, [])

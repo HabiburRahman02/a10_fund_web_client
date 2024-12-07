@@ -76,10 +76,10 @@ const Register = () => {
     }
 
     return (
-        <div className='bg-white'>
+        <div className='bg-white dark:bg-gray-900 dark:text-white'>
             <div className='md:flex gap-28 max-w-[1200px] mx-auto' >
                 <div className='md:w-1/2 md:flex items-center justify-center'>
-                    <form onSubmit={handleRegister} className="bg-[#F5F5F5] px-6 py-12 space-y-6 w-full">
+                    <form onSubmit={handleRegister} className="bg-[#F5F5F5] dark:text-black px-6 py-12 space-y-6 w-full">
                         <div className='mx-auto text-center'>
                             <h6 className='font-bold text-2xl'>Welcome To</h6>
                             <h2 className='font-bold text-[40px]'>Crowd<span className='text-blue-500'>Cube</span></h2>
