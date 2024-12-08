@@ -106,7 +106,7 @@ const Navbar = () => {
                                     </button>
                                 </Link>
                                 <Link to='/register'>
-                                    <button className="py-2 px-8  text-white font-bold border-[2px] bg-[rgb(37,168,214)] border-transparent hover:border-[2px] hover:border-white hover:bg-transparent transition-all">
+                                    <button className="py-2 px-8 hidden md:block text-white font-bold border-[2px] bg-[rgb(37,168,214)] border-transparent hover:border-[2px] hover:border-white hover:bg-transparent transition-all">
                                         Register
                                     </button>
                                 </Link>
