@@ -72,10 +72,10 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-3">
+                    <input onClick={handleThemeChange} type="checkbox" className="toggle text-blue-500" />
                     {
                         user ?
                             <div className="flex items-center gap-2">
-                                <input onClick={handleThemeChange} type="checkbox" className="toggle text-blue-500" />
                                 <div className="dropdown dropdown-end">
                                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                         <div className="w-10 h-10 object-cover rounded-full border-2 border-[rgb(37,168,214)] p-1">

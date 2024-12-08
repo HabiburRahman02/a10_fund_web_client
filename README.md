@@ -1,8 +1,18 @@
-# React + Vite
+1. Website name ?
+- CrowdCube 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2. Link link ?
+- https://fundweb.netlify.app
 
-Currently, two official plugins are available:
+3. Website feature your website!
+- This is a funding website designed to help impoverished and vulnerable individuals who often face various challenges and need assistance. Through this platform, they can request help.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+People who wish to support and assist those in need can also make donations via this platform.
+
+Donations must be made before the campaign deadline. If the deadline has passed, the donation option will be disabled.
+
+Donors can view their contributions based on their email addresses.
+
+Campaigns can be added, updated, or deleted as needed. Additionally, several other features have been included to enhance the platform.
+
+
