@@ -1,7 +1,7 @@
 ### 1. Website name ?
 - CrowdCube 
 
-### 2. Link link ?
+### 2. Live website link ?
 - https://fundweb.netlify.app
 
 ### 3. Website feature your website!

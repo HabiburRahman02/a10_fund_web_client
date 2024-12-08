@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { AuthContent } from "../../../Provider/AuthProvider";
 import Swal from "sweetalert2";
@@ -6,7 +6,6 @@ import logo from '../../../assets/logo/logo.jpg'
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContent);
-    const [onHover, setOnHover] = useState(false);
     const location = useLocation();
     const matched = location.pathname === '/'
 

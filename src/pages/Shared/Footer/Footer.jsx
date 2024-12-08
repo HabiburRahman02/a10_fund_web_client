@@ -3,7 +3,7 @@ import { FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <Fade duration={2000} direction="up">
+        <Fade >
             <div className="bg-[#1d181f]">
                 <footer className="footer md:flex justify-between py-20 max-w-[1200px] mx-auto font-bold  text-[#979797] p-10">
                     <nav>
