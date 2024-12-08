@@ -33,13 +33,15 @@ const SocialIcon = () => {
             })
     }
 
+
+
     return (
-        <div className="flex gap-6 justify-between">
+        <div className="lg:flex gap-6 justify-between">
             <Link onClick={handleGoogleLogin} className="flex items-center gap-2 font-semibold border-2 rounded-md p-4 w-full">
                 <img src={googleImg} alt="" />
                 <p >Sign in with Google</p>
             </Link>
-            <Link className="flex items-center gap-2 font-semibold border-2 rounded-md p-4 w-full">
+            <Link className="flex mt-3 cursor-not-allowed md:mt-0 items-center gap-2 font-semibold border-2 rounded-md p-4 w-full">
                 <FaGithub className="text-2xl"></FaGithub>
                 <p>Sign in with Github</p>
             </Link>

@@ -16,7 +16,7 @@ const MyDonationCard = ({ donation }) => {
             </figure>
             <div className="space-y-2 flex flex-col justify-between flex-grow">
                 <div className="space-y-2 p-4 ">
-                    <h2 className="card-title text-base">{title}</h2>
+                    <h2 className="card-title text-base dark:text-black">{title}</h2>
                     <p className="text-gray-600">{description}</p>
                     <p className="text-sm text-gray-600">Donation Amount: {amount} Tk</p>
                     <p className="text-sm text-gray-600">Date: {deadline}</p>

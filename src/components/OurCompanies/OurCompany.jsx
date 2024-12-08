@@ -1,4 +1,3 @@
-import { Fade } from "react-awesome-reveal";
 
 const OurCompany = ({ userName, img, des }) => {
     return (
@@ -8,7 +7,6 @@ const OurCompany = ({ userName, img, des }) => {
             <h3 className="text-2xl font-semibold mt-2">{userName}</h3>
             <p className="mt-4 text-gray-600 text-lg  dark:text-gray-300">{des}</p>
         </div>
-
     );
 };
 
