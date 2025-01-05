@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 const RunningCampaignCard = (campaign) => {
-    const { _id, title, deadline, description, amount, photoUrl } = campaign.campaign
+    const { _id, title, deadline, amount, photoUrl } = campaign.campaign
     const [hover, setHover] = useState(false);
 
     return (
@@ -24,7 +24,7 @@ const RunningCampaignCard = (campaign) => {
             <div className="space-y-2 flex flex-col justify-between flex-grow">
                 <div className="space-y-2 p-4 ">
                     <h2 className="card-title text-base">{title}</h2>
-                    <p className="text-gray-600 dark:text-gray-400">{description}</p>
+                    {/* <p className="text-gray-600 dark:text-gray-400">{description.slice(0, 30)}</p> */}
                     <p className="text-sm text-gray-600 dark:text-gray-400">Donation Amount: {amount} Tk</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">Deadline: {deadline}</p>
                 </div>

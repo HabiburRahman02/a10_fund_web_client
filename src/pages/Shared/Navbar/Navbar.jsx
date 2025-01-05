@@ -41,7 +41,7 @@ const Navbar = () => {
     </>
     return (
         <div className={`text-white py-3 ${matched ? 'fixed top-0 z-50 w-full' : 'bg-[#1d181f]'}`}>
-            <div className="navbar max-w-[1200px] mx-auto">
+            <div className="navbar max-w-[1300px] mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

@@ -77,7 +77,7 @@ const Register = () => {
 
     return (
         <div className='bg-white dark:bg-gray-900 dark:text-white'>
-            <div className='md:flex gap-28 max-w-[1200px] mx-auto' >
+            <div className='md:flex gap-28 max-w-[1300px] mx-auto' >
                 <div className='md:w-1/2 md:flex items-center justify-center'>
                     <form onSubmit={handleRegister} className="bg-[#F5F5F5] dark:text-black px-6 py-12 space-y-6 w-full">
                         <div className='mx-auto text-center'>

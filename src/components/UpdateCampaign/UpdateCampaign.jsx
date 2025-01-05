@@ -46,7 +46,7 @@ const UpdateCampaign = () => {
     return (
         <div className="">
             <div className="py-20">
-                <div className="max-w-[1200px] mx-auto  p-12 bg-white  dark:text-black  min-h-screen">
+                <div className="max-w-[1300px] mx-auto  p-12 bg-white  dark:text-black  min-h-screen">
                     <div className="max-w-2xl mx-auto text-center mb-6">
                         <Heading title='Update Campaign'></Heading>
 

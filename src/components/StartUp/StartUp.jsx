@@ -6,7 +6,7 @@ import { Fade } from 'react-awesome-reveal';
 const StartUp = () => {
     return (
         <div className="bg-[#34495e]">
-            <div className='max-w-[1200px] mx-auto py-20'>
+            <div className='max-w-[1300px] mx-auto py-20 px-8 md:px-0'>
 
                 <div className='pb-10 text-white space-y-2 text-center mx-auto'>
                     <h1 className='text-[42px] font-bold '>Launch a Fundraise for Your Startup Online</h1>

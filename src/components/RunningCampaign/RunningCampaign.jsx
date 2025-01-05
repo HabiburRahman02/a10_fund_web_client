@@ -14,21 +14,21 @@ const RunningCampaign = () => {
     }, [])
 
     return (
-        <Fade direction="down" duration={2000}>
-            <div className="">
-                <div className="py-20 max-w-[1200px] mx-auto ">
-                    <Heading title="Running Campaigns"></Heading>
-                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
-                        {
-                            campaigns?.map(campaign => <RunningCampaignCard
-                                key={campaign._id}
-                                campaign={campaign}
-                            ></RunningCampaignCard>)
-                        }
-                    </div>
+        // <Fade direction="down" duration={2000}>
+        <div className="">
+            <div className="py-20 max-w-[1300px] mx-auto ">
+                <Heading title="Running Campaigns"></Heading>
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    {
+                        campaigns?.map(campaign => <RunningCampaignCard
+                            key={campaign._id}
+                            campaign={campaign}
+                        ></RunningCampaignCard>)
+                    }
                 </div>
             </div>
-        </Fade>
+        </div>
+        // </Fade>
     );
 
 };
