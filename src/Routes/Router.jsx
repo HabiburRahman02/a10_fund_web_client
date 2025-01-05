@@ -23,7 +23,7 @@ const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: '/allCampaign',
+                path: 'allCampaign',
                 element: <AllCampaign></AllCampaign>,
                 loader: () => fetch('https://funding-server-ashen.vercel.app/campaign')
             },
