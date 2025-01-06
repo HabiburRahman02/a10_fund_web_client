@@ -60,7 +60,7 @@ const ViewDetails = () => {
             })
     }
     return (
-        <div className="max-w-[1300px] mx-auto py-20">
+        <div className="max-w-[1200px] mx-auto py-20">
             <div className="p-4 md:p-8 border bg-white lg:w-1/2 mx-auto">
                 <img src={photoUrl} alt={title} className="w-full h-64 object-cover" />
                 <h2 className="text-2xl font-bold mt-4">{title}</h2>

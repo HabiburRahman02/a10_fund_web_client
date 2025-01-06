@@ -27,7 +27,7 @@ const AllCampaign = () => {
     return (
         <Slide duration={2000}>
             <div className="">
-                <div className="py-10 max-w-[1300px] mx-auto ">
+                <div className="py-10 max-w-[1200px] mx-auto ">
                     <div className="md:flex items-center justify-between">
                         <Heading title="All Campaigns"></Heading>
                         <button onClick={handleSort} className="bg-[rgb(37,168,214)] p-4 mb-6 text-white font-bold hover:bg-[rgb(10,132,176)] transition-colors">

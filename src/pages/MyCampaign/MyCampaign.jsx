@@ -23,7 +23,7 @@ const MyCampaign = () => {
     return (
         <Fade duration={2000} direction="right">
             <div>
-                <div className="py-10 max-w-[1300px] mx-auto">
+                <div className="py-10 max-w-[1200px] mx-auto">
                     <Heading title="My Campaigns"></Heading>
                     <div>
                         <div className="overflow-x-auto">

@@ -7,7 +7,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        first: 'rgb(37,168,214)',
+        second: 'rgb(37,138,214)',
+      }
+    },
   },
   plugins: [
     require('daisyui'),

@@ -17,7 +17,7 @@ const Modal = () => {
         <div>
             {/* You can open the modal using document.getElementById('ID').showModal() method */}
             <dialog id="my_modal_4" className="modal">
-                <div className="modal-box max-w-[1300px] mx-auto">
+                <div className="modal-box max-w-[1200px] mx-auto">
                     <div className="">
                         <div className="max-w-2xl mx-auto text-center mb-6">
                             <Heading title='Update Campaign'></Heading>

@@ -1,3 +1,4 @@
+import Heading from "../../components/Heading/Heading";
 import BlogCard from "./BlogCard";
 
 const Blogs = () => {
@@ -24,10 +25,12 @@ const Blogs = () => {
     ];
 
     return (
-        <section className="py-10 bg-gray-100">
+        <section className="py-20 bg-gray-100">
             <div className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-8">
                 {/* Section Title */}
-                <h1 className='text-[42px] font-bold text-center mb-12'>Our Blogs</h1>
+                <Heading
+                    title='Our Blogs'
+                ></Heading>
 
                 {/* Blog Cards Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
