@@ -4,10 +4,10 @@ import values from '../../assets/contact/values.png'
 const Principles = () => {
     return (
         <div className="mb-20">
-            <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">
+            <h2 className="dark:text-white text-3xl font-bold text-gray-800 text-center mb-12">
                 Our Guiding Principles
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Mission */}
                 <div className="p-6 bg-gray-50 hover:bg-white shadow hover:shadow-lg transition duration-300">
                     <img

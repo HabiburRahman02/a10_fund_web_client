@@ -31,7 +31,8 @@ const Navbar = () => {
     const links = <>
         <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/'>Home</NavLink>
         <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='allCampaign'>All Campaign</NavLink>
-        <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='contactUs'>Contact Us</NavLink>
+        <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='aboutUs'>About Us</NavLink>
+        <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='contactUs'>Contact</NavLink>
         {
             user && <>
                 <NavLink className={({ isActive }) => `mr-4 uppercase text-md hover:text-blue-400 transition-all font-medium ${isActive && ' border-b-[2px]'}`} to='/addNewCampaign'>Add New Campaign</NavLink>
@@ -41,7 +42,7 @@ const Navbar = () => {
         }
     </>
     return (
-        <div className={`text-white py-3 ${matched ? 'fixed top-0 z-50 w-full' : 'bg-[#1d181f]'}`}>
+        <div className={`text-white py-3 ${matched ? 'fixed top-0 z-50 w-full' : 'bg-[#1d181f] fixed top-0 z-50 w-full'}`}>
             <div className="navbar max-w-[1200px] mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">

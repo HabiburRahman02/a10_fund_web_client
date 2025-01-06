@@ -11,7 +11,8 @@ import MyCampaign from "../pages/MyCampaign/MyCampaign";
 import UpdateCampaign from "../components/UpdateCampaign/UpdateCampaign";
 import NotFound from "../components/NotFound/NotFound";
 import MyDonation from "../pages/MyDonation/MyDonation";
-import ContactUs from '../pages/ContactUs/ContactUs'
+import AboutUs from "../pages/AboutUs/AboutUs";
+import Contact from "../pages/Contact/Contact";
 
 const router = createBrowserRouter([
     {
@@ -42,8 +43,12 @@ const router = createBrowserRouter([
                 element: <Register></Register>
             },
             {
+                path: '/aboutUs',
+                element: <AboutUs></AboutUs>
+            },
+            {
                 path: '/contactUs',
-                element: <ContactUs></ContactUs>
+                element: <Contact></Contact>
             },
             {
                 path: '/addNewCampaign',

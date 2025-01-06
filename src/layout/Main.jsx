@@ -7,7 +7,7 @@ const Main = () => {
     const notShow = location.pathname.includes('/login') || location.pathname.includes('/register')
     return (
         <div>
-            <div className="">
+            <div className={`${location.pathname === '/' ? 'pb-0' : 'pb-20'}`}>
                 {notShow || <Navbar></Navbar>}
             </div>
 
