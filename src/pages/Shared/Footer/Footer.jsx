@@ -22,7 +22,7 @@ const Footer = () => {
 
                         {/* Company Section */}
                         <div>
-                            <h6 className="text-lg font-semibold mb-4">Company</h6>
+                            <h6 className="text-lg font-semibold mb-4">Features</h6>
                             <ul className="space-y-2">
                                 <li> <a href='#blogs' className="hover:text-blue-500 transition-all">Blogs</a></li>
                                 <li> <a href='#feedback' className="hover:text-blue-500 transition-all">Feedback</a></li>

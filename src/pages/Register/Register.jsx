@@ -124,7 +124,7 @@ const Register = () => {
                         </div>
                     </form>
                 </div>
-                <div className='md:w-1/2 h-screen flex items-center text-center bg-cover bg-center p-24 opacity-90 text-white' style={{ backgroundImage: `url(${bgImg})` }}>
+                <div className='md:w-1/2 h-screen flex items-center text-center bg-cover bg-center p-4 opacity-90 text-white' style={{ backgroundImage: `url(${bgImg})` }}>
                     <div>
 
                         <h2 className='font-bold text-[40px]'>Crowd<span className='text-blue-500'>Cube</span></h2>

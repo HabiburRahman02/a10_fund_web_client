@@ -31,7 +31,7 @@ const RunningCampaignCard = (campaign) => {
                 <div className="pt-2">
                     <Link to={`/viewDetails/${_id}`}>
                         <button
-                            className={`py-4 w-full transition-all  ${hover ? 'bg-[rgb(37,168,214)] text-white' : 'dark:bg-gray-100 bg-gray-100 dark:text-black'}`}>See More</button>
+                            className={`py-4 w-full transition-all  ${hover ? 'bg-[rgb(37,168,214)] text-white duration-300' : 'dark:bg-gray-100 bg-gray-100 dark:text-black'}`}>See More</button>
                     </Link>
                 </div>
             </div>

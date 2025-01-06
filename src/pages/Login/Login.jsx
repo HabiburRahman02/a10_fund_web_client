@@ -85,10 +85,10 @@ const Login = () => {
                         </div>
                     </form>
                 </div>
-                <div className='md:w-1/2 h-screen flex items-center text-center bg-cover bg-center text-white p-24 opacity-90' style={{ backgroundImage: `url(${bgImg})` }}>
-                    <div>
-                        <h2 className='font-bold text-[40px]'>Crowd<span className='text-blue-500'>Cube</span></h2>
-                        <p className='font-medium'>Be the reason someone smiles today—your donation can turn dreams into reality and hardships into happiness.</p>
+                <div className='md:w-1/2 h-screen flex items-center text-center bg-cover bg-center text-white p-4 opacity-90' style={{ backgroundImage: `url(${bgImg})` }}>
+                    <div className='text-center'>
+                        <h2 className='font-bold text-[40px] text-center'>Crowd<span className='text-blue-500'>Cube</span></h2>
+                        <p className='font-medium text-center'>Be the reason someone smiles today—your donation can turn dreams into reality and hardships into happiness.</p>
                     </div>
                 </div>
             </div>

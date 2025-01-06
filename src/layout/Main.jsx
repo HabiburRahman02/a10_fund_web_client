@@ -12,7 +12,7 @@ const Main = () => {
                 {notShow || <Navbar></Navbar>}
             </div>
 
-            <div className="">
+            <div className="min-h-72">
                 <Outlet></Outlet>
             </div>
 
