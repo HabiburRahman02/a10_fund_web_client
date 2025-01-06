@@ -31,7 +31,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/viewDetails/:id',
-                element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
+                element: <ViewDetails></ViewDetails>,
                 loader: ({ params }) => fetch(`https://funding-server-ashen.vercel.app/campaignById/${params.id}`)
             },
             {

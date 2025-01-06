@@ -55,7 +55,7 @@ const Footer = () => {
                     <div className="border-t border-[#444] mt-8 pt-6 flex justify-between items-center text-sm">
                         <div className="flex items-center justify-center mx-auto gap-4">
                             <img src={logo} alt="Logo" className="" />
-                            <p>&copy; {new Date().getFullYear()} All Rights Reserved. Your Company Name.</p>
+                            <p>&copy; {new Date().getFullYear()} All Rights Reserved By CrowCube</p>
                         </div>
                     </div>
                 </footer>

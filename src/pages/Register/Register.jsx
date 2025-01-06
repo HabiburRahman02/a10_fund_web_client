@@ -5,6 +5,7 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useContext, useState } from 'react';
 import { AuthContent } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
+import { IoCloseSharp } from 'react-icons/io5';
 
 
 const Register = () => {
@@ -80,6 +81,11 @@ const Register = () => {
             <div className='md:flex gap-28 max-w-[1200px] mx-auto' >
                 <div className='md:w-1/2 md:flex items-center justify-center'>
                     <form onSubmit={handleRegister} className="bg-[#F5F5F5] dark:text-black px-6 py-12 space-y-6 w-full">
+                        <div className='flex justify-end'>
+                            <Link to='/'>
+                                <IoCloseSharp className='text-2xl hover:text-red-500 cursor-pointer'></IoCloseSharp>
+                            </Link>
+                        </div>
                         <div className='mx-auto text-center'>
                             <h6 className='font-bold text-2xl'>Welcome To</h6>
                             <h2 className='font-bold text-[40px]'>Crowd<span className='text-blue-500'>Cube</span></h2>

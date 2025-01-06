@@ -5,9 +5,10 @@ import Footer from "../pages/Shared/Footer/Footer";
 const Main = () => {
     const location = useLocation();
     const notShow = location.pathname.includes('/login') || location.pathname.includes('/register')
+    const matched = location.pathname === '/' || location.pathname === '/login' || location.pathname === '/register'
     return (
         <div>
-            <div className={`${location.pathname === '/' ? 'pb-0' : 'pb-20'}`}>
+            <div className={`${matched ? 'pb-0' : 'pb-20'}`}>
                 {notShow || <Navbar></Navbar>}
             </div>
 

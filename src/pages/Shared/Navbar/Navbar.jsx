@@ -128,13 +128,8 @@ const Navbar = () => {
                             :
                             <>
                                 <Link to='/login'>
-                                    <button className="py-2 px-8 border-2  hover:text-white font-bold hover:bg-[rgb(37,168,214)] hover:border-[rgb(37,168,214)] transition-colors">
+                                    <button className="py-2 px-8  text-white font-bold border-[2px] bg-[rgb(37,168,214)] border-transparent hover:border-[2px] hover:border-white hover:bg-transparent transition-all">
                                         Login
-                                    </button>
-                                </Link>
-                                <Link to='/register'>
-                                    <button className="py-2 px-8 hidden md:block text-white font-bold border-[2px] bg-[rgb(37,168,214)] border-transparent hover:border-[2px] hover:border-white hover:bg-transparent transition-all">
-                                        Register
                                     </button>
                                 </Link>
                             </>

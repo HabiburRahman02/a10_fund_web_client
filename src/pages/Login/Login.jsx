@@ -6,6 +6,7 @@ import { useContext, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { AuthContent } from '../../Provider/AuthProvider';
+import { IoCloseSharp } from "react-icons/io5";
 
 
 const Login = () => {
@@ -48,7 +49,12 @@ const Login = () => {
                 <div className='md:w-1/2 md:flex items-center justify-center'>
                     <form onSubmit={handleLogin} className="bg-[#F5F5F5] dark:text-black px-6 py-12 space-y-6 w-full">
                         <div>
-                            <h6 className='font-bold text-2xl'>Welcome Back!</h6>
+                            <div className='flex justify-between items-center'>
+                                <h6 className='font-bold text-2xl'>Welcome Back!</h6>
+                                <Link to='/'>
+                                    <IoCloseSharp className='text-2xl hover:text-red-500 cursor-pointer'></IoCloseSharp>
+                                </Link>
+                            </div>
                             <p className='text-[#707070] font-medium'>Enter your Credentials to access your account</p>
                         </div>
                         <div className="form-control">

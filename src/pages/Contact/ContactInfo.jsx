@@ -1,7 +1,7 @@
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
 
-import contactImg from '../../assets/contact/who.png'
+import contactImg from '../../assets/contact/img.jpeg'
 import { Fade, Zoom } from "react-awesome-reveal";
 
 const ContactInfo = () => {

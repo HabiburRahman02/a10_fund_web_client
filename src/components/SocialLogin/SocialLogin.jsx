@@ -37,7 +37,7 @@ const SocialIcon = () => {
 
     return (
         <div className="lg:flex gap-6 justify-between">
-            <Link onClick={handleGoogleLogin} className="flex items-center gap-2 font-semibold border-2 rounded-md p-4 w-full">
+            <Link onClick={handleGoogleLogin} className="flex hover:bg-gray-200 items-center gap-2 font-semibold border-2 rounded-md p-4 w-full">
                 <img src={googleImg} alt="" />
                 <p >Sign in with Google</p>
             </Link>
