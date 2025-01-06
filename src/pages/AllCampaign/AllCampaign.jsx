@@ -8,6 +8,7 @@ const AllCampaign = () => {
     const LoadedCampaigns = useLoaderData();
     const [campaigns, setCampaigns] = useState(LoadedCampaigns);
     const [isLoading, setIsLoading] = useState(false);
+    console.log(campaigns);
 
     const handleSort = () => {
         setIsLoading(true)

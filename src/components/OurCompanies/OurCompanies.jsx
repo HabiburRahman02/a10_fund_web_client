@@ -11,7 +11,7 @@ import Marquee from 'react-fast-marquee';
 const OurCompanies = () => {
     return (
         <div>
-            <div className="bg-gray-100 dark:bg-gray-900 dark:text-white">
+            <div id='feedback' className="bg-gray-100 dark:bg-gray-900 dark:text-white">
                 <div className='py-20'>
                     <div className='pb-10 space-y-2 text-center mx-auto'>
                         <h1 className='text-[42px] font-bold '>Fundable Helps Great Companies Raise Funding</h1>

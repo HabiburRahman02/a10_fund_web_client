@@ -1,7 +1,7 @@
 import selfImg from '../../assets/startup/self-managed-icon.svg'
 import guidedImg from '../../assets/startup/guided-fundraise-icon.svg'
 import { Link } from 'react-router-dom';
-import { Fade } from 'react-awesome-reveal';
+// import { Fade } from 'react-awesome-reveal';
 
 const StartUp = () => {
     return (
@@ -25,13 +25,13 @@ const StartUp = () => {
                         <div className="card-body text-center mx-auto">
                             <p className='text-2xl text-gray-500'>Id like to use Fundable to host my fundraise to collect investor commitments from my network.</p>
                             <div className="card-actions justify-center">
-                                <Link to='/'>
+                                <a href='#blogs'>
                                     <button className="uppercase mt-2 bg-[rgb(37,168,214)] py-3 px-8  text-white font-bold 
                                     border-[2px]
                                     border-transparent hover:border-[2px] hover:border-[rgb(37,168,214)] hover:text-[rgb(37,168,214)] hover:bg-transparent transition-all">
                                         Learn More
                                     </button>
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -47,13 +47,13 @@ const StartUp = () => {
                         <div className="card-body text-center mx-auto">
                             <p className='text-2xl text-gray-500'>Id like the Fundable team to create my pitch deck, research prospective investors that may be interested, and support me throughout the process.</p>
                             <div className="card-actions justify-center">
-                                <Link to='/'>
+                                <a href='#blogs'>
                                     <button className="uppercase mt-2 bg-[rgb(37,168,214)] py-3 px-8  text-white font-bold 
                                     border-[2px]
                                     border-transparent hover:border-[2px] hover:border-[rgb(37,168,214)] hover:text-[rgb(37,168,214)] hover:bg-transparent transition-all">
                                         Learn More
                                     </button>
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     </div>

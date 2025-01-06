@@ -10,7 +10,7 @@ export default {
     extend: {
       colors: {
         first: 'rgb(37,168,214)',
-        second: 'rgb(37,138,214)',
+        second: 'rgb(10,132,176)',
       }
     },
   },

@@ -39,7 +39,7 @@ const Slider = () => {
                                     </p>
                                 </Fade>
                                 <Fade direction='up' duration={2000}>
-                                    <Link to='/'>
+                                    <Link to='allCampaign'>
                                         <button className="uppercase bg-[rgb(37,168,214)] py-3 px-8  text-white font-bold 
                                     border-[2px]
                                     border-transparent hover:border-[2px] hover:border-white hover:bg-transparent transition-all">
@@ -74,7 +74,7 @@ const Slider = () => {
                                     </p>
                                 </Fade>
                                 <Fade direction='up' duration={2000}>
-                                    <Link to='/'>
+                                    <Link to='allCampaign'>
                                         <button className="uppercase bg-[rgb(37,168,214)] py-3 px-8  text-white font-bold 
                                     border-[2px]
                                     border-transparent hover:border-[2px] hover:border-white hover:bg-transparent transition-all">
@@ -109,7 +109,7 @@ const Slider = () => {
                                     </p>
                                 </Fade>
                                 <Fade direction='up' duration={2000}>
-                                    <Link to='/'>
+                                    <Link to='allCampaign'>
                                         <button className="uppercase bg-[rgb(37,168,214)] py-3 px-8  text-white font-bold 
                                     border-[2px]
                                     border-transparent hover:border-[2px] hover:border-white hover:bg-transparent transition-all">

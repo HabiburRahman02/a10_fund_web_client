@@ -1,8 +1,8 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { AuthContent } from "../../../Provider/AuthProvider";
 import Swal from "sweetalert2";
-import logo from '../../../assets/logo/logo.jpg'
+import logo from '../../../assets/logo/money2.png'
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContent);
@@ -41,8 +41,29 @@ const Navbar = () => {
             </>
         }
     </>
+    const [scrolled, setScrolled] = useState(false);
+
+    // Effect to listen for scroll events
+    useEffect(() => {
+        const handleScroll = () => {
+            // If scroll position is greater than 50px, change the background
+            if (window.scrollY > 300) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        // Add the scroll event listener
+        window.addEventListener("scroll", handleScroll);
+
+        // Cleanup the event listener on component unmount
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
     return (
-        <div className={`text-white py-3 ${matched ? 'fixed top-0 z-50 w-full' : 'bg-[#1d181f] fixed top-0 z-50 w-full'}`}>
+        <div className={`text-white py-3 ${matched ? 'fixed top-0 z-50 w-full' : 'bg-[#1d181f] fixed top-0 z-50 w-full'} ${scrolled && 'bg-[#1d181f]'}`}>
             <div className="navbar max-w-[1200px] mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">

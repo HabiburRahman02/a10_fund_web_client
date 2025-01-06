@@ -45,7 +45,7 @@ const TeamSection = () => {
     ];
 
     return (
-        <div className="mb-20">
+        <div id="team" className="mb-20">
             <h2 className="dark:text-white text-3xl font-bold text-gray-800 text-center mb-8">
                 Meet Our Team
             </h2>
