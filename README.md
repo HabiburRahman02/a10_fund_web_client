@@ -93,7 +93,7 @@
 [https://fundweb.netlify.app/](https://fundweb.netlify.app/)
 
 ## GitHub Repository (Client):
-[https://github.com/HabiburRahman02/a10_fund_web_client](https://github.com/HabiburRahman02/a10_fund_web_client)
+[https://github.com/HabiburRahman02/a10_fund_web_server](https://github.com/HabiburRahman02/a10_fund_web_server)
 
 
 
