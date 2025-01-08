@@ -1,3 +1,6 @@
+## Home page screenshots
+![Fund Collection Website](https://i.ibb.co/RBxp95v/tourist.jpg)
+
 ## Project name
 - Fund Collection Website
 
